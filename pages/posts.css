@@ -1,0 +1,11 @@
+#lista2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+#lista2 p {
+    margin-left: 0%;
+    justify-self: start;
+    padding-left: 0%;
+}

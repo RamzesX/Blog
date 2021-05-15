@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset ="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <title>My test page</title>
+      <link rel="stylesheet" href="./style.css"/>
+      <link rel="stylesheet" href="./post.css"/>
+      <link rel="stylesheet" href="./popup.css"/>
+      <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+      <link href="https://cdn.quilljs.com/1.3.6/quill.bubble.css" rel="stylesheet">
+  </head>
+  <body>
+
+  
+
+  <header>
+    <div id="buttony"> 
+      <button id ="menu"></button>
+     
+      <button onclick="location.replace('./posts.html')" id ="lupka"></button>
+    </div>
+
+    <div id="header">
+      <a href ="./index.html"> <h1> Tech<div id="wrapper"> <img id="rakieta" src="./rocket.svg" alt="obrazek"></div>Authority</h1> </a>
+      <ul class="lista4" id="lista">
+      <li> Machine Learning</li>
+      <li> Ai  </li>
+      <li> QA  </li>
+      <li> Internet of Things</li>
+      </ul>
+    </div>
+
+    <div id="kontener-sub">
+       <a href="#popup1"> <button id="sub">Subscribe</button> </a>
+    </div>
+  </header> 
+  
+   <section id="Boring"> 
+    <div id="flex">
+    <img id="lady" src="./lady.svg"> </img>
+    <img id="man" src="./man.svg"> </img>
+    <img id="man2" src="./man2.svg" > </img>
+    </div>
+
+
+    <div id="border" </div>
+   
+    </section>
+  <section id="conatiner">
+
+    <aside>Post overview and its roadmap </aside>
+
+    <section id="post"> 
+      <div id="naglowek_Posta"> 
+      <div id="img_container"> <img id="post_obrazek" src="js.png"> </img> </div>
+      <h2 id="title"> Javascript event loop  </h2> 
+      <h6 id="kiedy_napisane"> Written by <i>Norbert Marchewka </i> at <b> 22:35 11.23.2016r </b> </h6> 
+      </div>
+      <p id="post_content"> 
+
+      </p>
+<p class="linki"> Wanna see more texts about <a href="./index.html" > Javascript? </a> </p>
+<p class="linki" id="a2"> You can also see all texts <a href="./index.html"> Here.</a> </p>
+    
+    </section>
+
+    <aside id = "zbior"> Zbiór postów podzielonych na kategorie</aside>
+
+  
+    </section>
+    
+
+   
+
+
+  </section>
+
+  <footer>
+  <img id="girl" src="./girl.svg"> </img>
+  <div id="content1"> 
+   <h4>Need Help?</h4>
+   <ol class="klasa">
+    <li> Privacy Policy </li>
+    <li> Pricing </li>
+    <li> Offers </li>
+    <li> Legal </li>
+   </ol>
+  </div>
+
+
+  <div id="content2">
+   <h4> Company </h4>
+   <ol class="klasa">
+    <li> Projects</li>
+    <li> Services </li>
+    <li> Job Offers </li>
+    <li> Crew </li>
+   </ol>
+  </div>
+
+
+  <img id="chlopak" src="./man3.svg"> </div>
+  <div id="dane">
+  <ol id="dane2" class="klasa">
+    <li> Juliusza Słowackiego 44</li>
+    <li> 00 - 310 Warszawa </li>
+    <li> TechAuthority@gmail.com</li>
+    <li> <span>892 448 654</span> <span> 725 967 297 </span> </li>
+    <li> <div id="social">
+      <img src="./Linkedin.svg"> </img>
+      <img src="./Facebook.svg"> </img>
+      <img src="./YouTube.svg"> </img> </div>
+      </li>
+   </ol>
+  </div>
+  </footer>
+
+    <div id="popup1" class="overlay">
+	<div class="popup">
+		<h2>Subscription</h2>
+		<a class="close" href="#">&times;</a>
+     <form action="file:///home/norbert/praca/projekty/Blog2/pages/index.html">
+      <label for="fname">Email-Adress:</label><br>
+      <input type="text" id="fname" name="fname" value="John"><br>
+      <input id="guzik" type="submit" value="Submit">
+    </form> 
+		<div class="content">
+			Please gave us your email adress so we can sent you news as fast as possible </div>
+	</div>
+</div>
+
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+<script>
+
+
+
+
+
+
+
+ 
+
+
+  var options = {
+  theme: 'bubble'
+}
+
+
+
+
+
+
+
+var quill = new Quill('#post_content', options);
+  quill.setContents([ 
+    { insert: 'Hello ' },
+    { insert: 'Wowqqqqqqqqqwwds!', attributes: { bold: true } },
+    { insert: '\n' },
+    { insert: '\n' },
+    { insert: '\n' },
+    { insert: '\n' },
+    { insert: '\n' },
+    { insert: '\n' },
+    { insert: '\n' },
+    { insert: '\n' },
+    { insert: 'dsfsdfsf' }
+    
+  ]);
+
+quill.enable(false)
+
+
+
+</script>
+    
+  </body>
+</html>

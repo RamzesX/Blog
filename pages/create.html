@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset ="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <title>My test page</title>
+      <link rel="stylesheet" href="./style.css"/>
+      <link rel="stylesheet" href="./create.css"/>
+      <link rel="stylesheet" href="./popup.css"/>
+      <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+      <link href="https://cdn.quilljs.com/1.3.6/quill.bubble.css" rel="stylesheet">
+      <script
+			  src="https://code.jquery.com/jquery-3.6.0.min.js"
+			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			  crossorigin="anonymous">
+     </script>
+		
+  </head>
+  <body>
+
+  
+
+  <header>
+    <div id="buttony"> 
+      <button id ="menu"></button>
+     
+      <button onclick="location.replace('./posts.html')" id ="lupka"></button>
+    </div>
+
+   <div id="header">
+      <a href ="./index.html"> <h1> Tech<div id="wrapper"> <img id="rakieta" src="./rocket.svg" alt="obrazek"></div>Authority</h1> </a>
+      <ul class="lista4" id="lista">
+      <li> Machine Learning</li>
+      <li> Ai  </li>
+      <li> QA  </li>
+      <li> Internet of Things</li>
+      </ul>
+    </div>
+
+    <div id="kontener-sub">
+       <a href="#popup1"> <button id="sub">Subscribe</button> </a>
+    </div>
+  </header> 
+  
+   <section id="Boring"> 
+    <div id="flex">
+    <img id="lady" src="./lady.svg"> </img>
+    <img id="man" src="./man.svg"> </img>
+    <img id="man2" src="./man2.svg" > </img>
+    </div>
+
+
+    <div id="border" </div>
+   
+    </section>
+
+
+  <form id="conatiner" action="./create.html" type="GET">
+
+    <aside id="aside_list"> 
+    <h4> Post overview and its roadmap </h4>
+    <ul id="first_level_list"> 
+        <li id="1" class="lisc"> <img id="pen" class="pencil" src="./pencil.png" height="18px" width="18px"> <textarea class="paragraf" id="form1" value="Pierwszy Paragraf"> </textarea> </li>
+    </ul>
+    <img class="cross" src="./pngegg.png" width="18px" height="18px"> 
+    <img id="minus" class="cross" src="./minus.png" width="28px" height="20px"> 
+
+    </aside>
+    <section id="post"> 
+      <div id="naglowek_Posta"> 
+      <div id="img_container">
+        <div>
+        <label id="label_obrazka" for="file_image">Post Miniature</label>
+        <input id="image_input" type="file" name="file_image" form="#conatiner"/>
+        </div>
+        <img id="post_obrazek" src="js.png"> </img> 
+        </div>
+      <h2 id="title">
+      <label> Title </label>
+      <input type="text" name="post_title" value="Tytuł twojego posta"/>
+      </h2> 
+      <div id="kiedy_napisane">  <label for="post_author">Napisane przez:</label>
+      <input type="text" name="post_author" value="Norbert Marchewka"/> at <b> 22:35 11.23.2016r </b> </div> 
+      </div>
+      
+
+      <input type="hidden" name="content">
+      
+
+      <p id="post_content">
+      <input type="hidden" name="content">
+
+      
+      </p>
+
+      <button id="sendPost" type="submit" form="conatiner" value="Submit">Submit</button>
+
+    
+    </section>
+
+    <aside id="zbior">
+        <h4 id="tag_heading">Tags</h4>
+
+      <div id="chosen_tags">
+        <div class="picked_category">
+        <img class="category_cross" src ="./minus.png" width="12px" height="12px">  </img> <span>aaa</span>
+        </div>
+        <div class="picked_category">
+        <img class="category_cross" src ="./minus.png" width="12px" height="12px">  </img> <span>Category name</span>
+        </div>
+        <div class="picked_category">
+        <img class="category_cross" src ="./minus.png" width="12px" height="12px">  </img> <span>assaass</span>
+        </div>
+      </div>
+
+      <div id="dynamic_tag_list"> 
+        <ul id="category_list">
+          <li> <img src="./check.png" width="18px" height="18px">Pierwsza kategoria </li>
+          <li> <img src="./check.png" width="18px" height="18px">Druga </li>
+          <li> <img src="./check.png" width="18px" height="18px">Trzevaaidasa</li>
+          <li> <img src="./check.png" width="18px" height="18px">dadasas</li>
+          <li> <img src="./check.png" width="18px" height="18px">Pierwsza kategoria </li>
+          <li> <img src="./check.png" width="18px" height="18px">Druga </li>
+          <li> <img src="./check.png" width="18px" height="18px">Trzevaaidasa</li>
+          <li> <img src="./check.png" width="18px" height="18px">dadasas</li>
+          <li> <img src="./check.png" width="18px" height="18px">Pierwsza kategoria </li>
+          <li> <img src="./check.png" width="18px" height="18px">Druga </li>
+          <li> <img src="./check.png" width="18px" height="18px">Trzevaaidasa</li>
+          <li> <img src="./check.png" width="18px" height="18px">dadasas</li>
+        </ul>
+      </div>
+
+      <div id="tag_filter">
+        <input id="tag_input" type=text value="Add Category">  <img id="cross_category" src="./pngegg.png" width="18px" height="18px">
+      </div>
+
+      </aside>
+
+
+  
+    </form>
+    
+
+   
+
+
+
+
+  <footer>
+  <img id="girl" src="./girl.svg"> </img>
+  <div id="content1"> 
+   <h4>Need Help?</h4>
+   <ol class="klasa">
+    <li> Privacy Policy </li>
+    <li> Pricing </li>
+    <li> Offers </li>
+    <li> Legal </li>
+   </ol>
+  </div>
+
+
+  <div id="content2">
+   <h4> Company </h4>
+   <ol class="klasa">
+    <li> Projects</li>
+    <li> Services </li>
+    <li> Job Offers </li>
+    <li> Crew </li>
+   </ol>
+  </div>
+
+
+  <img id="chlopak" src="./man3.svg"> </div>
+  <div id="dane">
+  <ol id="dane2" class="klasa">
+    <li> Juliusza Słowackiego 44</li>
+    <li> 00 - 310 Warszawa </li>
+    <li> TechAuthority@gmail.com</li>
+    <li> <span>892 448 654</span> <span> 725 967 297 </span> </li>
+    <li> <div id="social">
+      <img src="./Linkedin.svg"> </img>
+      <img src="./Facebook.svg"> </img>
+      <img src="./YouTube.svg"> </img> </div>
+      </li>
+   </ol>
+  </div>
+  </footer>
+
+    <div id="popup1" class="overlay">
+	<div class="popup">
+		<h2>Subscription</h2>
+		<a class="close" href="#">&times;</a>
+     <form action="file:///home/norbert/praca/projekty/Blog2/pages/index.html">
+      <label for="fname">Email-Adress:</label><br>
+      <input type="text" id="fname" name="fname" value="John"><br>
+      <input id="guzik" type="submit" value="Submit">
+    </form> 
+		<div class="content">
+			Please gave us your email adress so we can sent you news as fast as possible </div>
+	</div>
+</div>
+
+
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+
+
+<script src="./Tags.js"></script>
+<script src="./choseCategory.js"> </script>
+
+
+
+<script> 
+
+
+
+ function renderImage (inputEl, imgContainer ) {
+   file = inputEl.files[0];
+   const fr = new FileReader();
+
+    fr.addEventListener("load", function () {
+    // convert image file to base64 string
+    imgContainer.src = fr.result;
+  }, false);
+
+   fr.readAsDataURL(file);
+
+
+
+   console.log(inputEl.files[0]);
+   //inputEl.value = "";
+
+ }
+  
+  fileInput = document.getElementById("image_input");
+  imgContainer = document.getElementById('post_obrazek');
+
+  file = fileInput.files[0];
+  console.log(fileInput)
+   
+  fileInput.addEventListener('change', function () {
+
+    renderImage(this,imgContainer)
+  })
+
+
+
+</script>
+
+
+<script> 
+  el = document.getElementById("pen");
+  myfunction = (form) => {
+      form.focus()
+  };
+
+  var nodes = document.querySelectorAll(".lisc");
+
+  for (item of nodes){
+    el = item.childNodes[1];
+
+    el.addEventListener("click", function () {
+      this.nextSibling.nextSibling.focus();
+    })
+
+
+   
+
+  }
+
+
+  
+  
+ 
+
+
+  cross = document.querySelector(".cross")
+ 
+
+
+
+   findLastNode = () => {
+
+      lista = document.querySelector("#first_level_list");
+      node = lista.lastChild;
+
+      for(var node = lista.lastChild; node!=null; node=node.previousSibling) {
+        if (node.nodeType == 1 ) {
+         return node; 
+        }
+
+      console.log(node.nodeType);
+}
+
+
+
+  } 
+
+  
+
+  cross.addEventListener("click", function () {
+
+    lista = document.querySelector("#first_level_list");
+    nodes = lista.childNodes;
+
+    nowyNode = findLastNode().cloneNode("true")
+
+
+    id = nowyNode.getAttribute('id');
+    id = Number(id);
+    if ( id <= 8) {
+    id += 1;
+    nowyNode.setAttribute('id', id);
+    lista.appendChild(nowyNode);
+    nowyNode.childNodes[1].addEventListener("click", function () {
+    this.nextSibling.nextSibling.focus();
+    })
+
+    }
+    
+
+  }
+    
+
+  )
+
+  minus = document.getElementById("minus");
+  minus.addEventListener("click", function () {
+    last = findLastNode();
+
+    id = last.getAttribute('id');
+    id = Number(id);
+    if (id > 1) {
+    last.remove()
+    }
+  }
+  )
+
+
+</script>
+
+<script src="./dynamicList.js">  </script>
+
+
+
+
+
+
+
+    
+  </body>
+</html>
