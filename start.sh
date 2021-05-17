@@ -8,4 +8,5 @@ sudo fuser -k 4000/tcp
 
 
 sudo systemctl start mongod.service & 
-nodemon index.js
+firefox  http://localhost:4000/ &
+nodemon index.js 
