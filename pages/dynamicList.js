@@ -3,19 +3,6 @@ var options = {
 };
 
 var quill = new Quill("#post_content", options);
-quill.setContents([
-  { insert: "Hello " },
-  { insert: "Wowqqqqqqqqqwwds!\n", attributes: { bold: true } },
-  { insert: "\n" },
-  { insert: "\n" },
-  { insert: "\n" },
-  { insert: "\n" },
-  { insert: "\n" },
-  { insert: "\n" },
-  { insert: "\n" },
-  { insert: "\n" },
-  { insert: "dsfsdfsf" },
-]);
 
 var delta;
 
@@ -23,6 +10,7 @@ quill.on("text-change", function (delta, oldDelta, source) {
   var delta = quill.getContents();
 
   displayHeadings(delta);
+
 });
 
 function displayHeadings(delta) {
@@ -33,7 +21,10 @@ function displayHeadings(delta) {
     // for sure there cannot be header in 0 operation I;m asseting this.
 
     if (checkIfHeadingInAttrbutes(ops[i])) {
-      console.log(ops[i - 1].insert);
+      if (ops[i - 1] != undefined) {
+        heading = extractHeading(ops,i-1);
+        if (heading.length > 0) console.log(heading)
+      }
     }
   }
 }
@@ -45,8 +36,14 @@ function checkIfHeadingInAttrbutes(operation) {
   return false;
 }
 
-function extractHeading(operation) {
-  line = operation.insert;
+function extractHeading(operations, index) {
+  var heading = '';
+  var i = operations[index].insert.lastIndexOf('\n');
+  heading = operations[index].insert.substring(i+1);
+  return heading;
+
+
+
 }
 
 var form = document.querySelector("#conatiner");
