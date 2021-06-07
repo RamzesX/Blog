@@ -1,19 +1,62 @@
+
+lista = document.getElementById("first_level_list");
+
+lista.addEventListener('click', event => {
+  text = event.target.innerText;
+  headings = document.querySelectorAll(".rozdzial");
+  for ( heading of headings) {
+    if (heading.innerText == text ) {
+      console.log(heading);
+      const yOffset = -250; 
+      const y = heading.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({top: y, behavior: 'smooth'});
+      //heading.scrollIntoView();
+    }
+  } 
+})
+
 var options = {
   theme: "snow",
 };
 
 var quill = new Quill("#post_content", options);
 
+
+
 var delta;
+
+var Heading = Quill.import('formats/header');
+Heading.className = "rozdzial";
+Quill.register(Heading, true);
 
 quill.on("text-change", function (delta, oldDelta, source) {
   var delta = quill.getContents();
 
-  displayHeadings(delta);
+
+
+  var headings = getHeadings(delta);
+
+  
+
+
+  var lista = document.getElementById("first_level_list");
+  lista.innerHTML="";
+
+  for (heading of headings) {
+    var li = document.createElement("li");
+    li.appendChild(document.createTextNode(heading["heading"]));
+    lista.appendChild(li);
+  }
+
+  
+  
 
 });
 
-function displayHeadings(delta) {
+
+
+
+function getHeadings(delta) {
   headings = [];
   ops = delta.ops;
 
@@ -23,10 +66,17 @@ function displayHeadings(delta) {
     if (checkIfHeadingInAttrbutes(ops[i])) {
       if (ops[i - 1] != undefined) {
         heading = extractHeading(ops,i-1);
-        if (heading.length > 0) console.log(heading)
+        if (heading.length > 0) {
+          var data = {
+            heading: heading,
+            index: i-1 }
+          
+          headings.push(data);
+        }
       }
     }
   }
+  return headings;
 }
 
 function checkIfHeadingInAttrbutes(operation) {
@@ -41,20 +91,13 @@ function extractHeading(operations, index) {
   var i = operations[index].insert.lastIndexOf('\n');
   heading = operations[index].insert.substring(i+1);
   return heading;
-
-
-
 }
 
 var form = document.querySelector("#conatiner");
 form.onsubmit = function () {
-  event.preventDefault();
-  // Populate hidden form on submit
-  var about = document.querySelector("input[name=content]");
-  about.value = JSON.stringify(quill.getContents());
 
-  console.log("Submitted", jQuery(form).serialize(), $(form).serializeArray());
-
-  // No back end to actually submit to!
   return true;
 };
+
+
+

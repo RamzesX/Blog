@@ -55,7 +55,7 @@ label {
   grid-template-rows: auto auto;
 }
 
-#img_container > div {
+#img_container>div {
   text-align: center;
   margin-bottom: 25px;
 }
@@ -103,10 +103,20 @@ label {
   margin-top: 10px;
 }
 
-#aside_list > ul {
-  margin: 0 0 0px 15px;
+#aside_list>ul {
+  margin: 0px 15px;
   padding: 0;
   list-style: none;
+  max-height: 650px !important;
+  overflow: scroll;
+  
+}
+
+
+#aside_list li {
+  margin-bottom: 15px;
+  height: 100%;
+  word-break: break-all;
 }
 
 #aside_list {
@@ -114,7 +124,7 @@ label {
   margin-top: 160px;
 }
 
-#aside_list > h4 {
+#aside_list>h4 {
   margin: 0px 20px 20px 20px;
   text-align: start;
 }
@@ -151,24 +161,6 @@ label {
   margin-left: 10%;
 }
 
-#aside_list li img {
-  position: relative;
-  top: 3px;
-  vertical-align: middle;
-}
-
-#aside_list li {
-  display: inline-block;
-  margin-bottom: 15px;
-  height: 100%;
-}
-
-#aside_list li input:focus {
-  padding: 0;
-  border: solid 1px black;
-  outline: none;
-}
-
 .picked_category {
   border: 1px solid;
   padding-left: 5px;
@@ -203,7 +195,7 @@ label {
   overflow: scroll;
 }
 
-#dynamic_tag_list > ul {
+#dynamic_tag_list>ul {
   list-style: none;
   height: 300px;
   padding-left: 10px;
