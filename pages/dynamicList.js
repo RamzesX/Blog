@@ -6,7 +6,7 @@ lista.addEventListener('click', event => {
   headings = document.querySelectorAll(".rozdzial");
   for ( heading of headings) {
     if (heading.innerText == text ) {
-      console.log(heading);
+
       const yOffset = -250; 
       const y = heading.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({top: y, behavior: 'smooth'});

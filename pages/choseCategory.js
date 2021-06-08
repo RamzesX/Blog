@@ -9,15 +9,13 @@ function tagAlredyOnlist(string) {
 
   for (tag of Tagi) {
     tagText = tag.innerText.valueOf().toUpperCase().trim();
-    console.log(tagText);
-    console.log(string);
+  
     if (tagText == string) {
-      console.log("zawiera");
       return true;
     }
   }
 
-  console.log("nie zawiera");
+
   return false;
 }
 
@@ -35,4 +33,14 @@ lista.addEventListener("click", (event) => {
   if (event.target.tagName == "IMG" && !tagAlredyOnlist(nowyTag)) {
     addNewTag(nowyTag);
   }
+});
+
+
+listaTagow.addEventListener("click", (event) => {
+root = event.target.parentNode;
+console.log("cos nie dobrze")
+Tagi = document.querySelectorAll(".picked_category span");
+if (Tagi.length > 1 && event.target.tagName == "IMG") {
+  root.remove();
+}
 });

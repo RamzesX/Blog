@@ -3,7 +3,6 @@ categories = document.querySelectorAll("#dynamic_tag_list li");
 
 input.oninput = (e) => {
   categories = document.querySelectorAll("#dynamic_tag_list li");
-
   inputText = e.currentTarget.value.toUpperCase();
 
   for (category of categories) {
@@ -36,7 +35,6 @@ cross.onclick = (e) => {
 
   for (category of categories2) {
     if (stringCompare(inputText, category.innerText)) {
-      console.log("match");
       zawiera = true;
       break;
     }
@@ -46,13 +44,17 @@ cross.onclick = (e) => {
   } else {
     lista = document.getElementById("category_list");
     last = categories[categories.length - 1];
-    console.log(last);
+
     newCategory = last.cloneNode(true);
     newCategory.id = "nowwe";
     newCategory.childNodes[2].data = inputText.valueOf();
-    console.log(newCategory.childNodes[2]);
-    newCategory.display = "";
+    newCategory.display = "none";
     lista.appendChild(newCategory);
+
+    var event = new CustomEvent("input", { "detail": "Example of an event" });
+    input.dispatchEvent(event);
+
     //here we should also emit change event on form for
   }
 };
+
