@@ -58,7 +58,7 @@
   <form id="conatiner" action="./create.html" type="GET">
 
     <aside id="aside_list"> 
-    <h4> Post overview and its roadmap </h4>
+    <h4> Post overview and it's roadmap </h4>
     <ul id="first_level_list"> 
         
     </ul>
@@ -67,19 +67,10 @@
     </aside>
     <section id="post"> 
       <div id="naglowek_Posta"> 
-      <div id="img_container">
-        <div>
-        <label id="label_obrazka" for="file_image">Post Miniature</label>
-        <input id="image_input" type="file" name="file_image" form="#conatiner"/>
-        </div>
-        <img id="post_obrazek" src="js.png"> </img> 
-        </div>
-      <h2 id="title">
-      <label> Title </label>
-      <input type="text" name="post_title" value="Tytuł twojego posta"/>
-      </h2> 
-      <div id="kiedy_napisane">  <label for="post_author">Napisane przez:</label>
-      <input type="text" name="post_author" value="Norbert Marchewka"/> at <b> 22:35 11.23.2016r </b> </div> 
+        <h2 id="title">
+          <label> Title </label>
+          <input type="text" name="post_title" value=""/>
+        </h2> 
       </div>
       
 
@@ -87,9 +78,7 @@
       
 
       <p id="post_content">
-      <input type="hidden" name="content">
-
-      
+        <input type="hidden" name="content">
       </p>
 
       <button id="sendPost" type="submit" form="conatiner" value="Submit">Submit</button>
@@ -207,38 +196,5 @@
 <script src="./Tags.js"></script>
 <script src="./choseCategory.js"> </script>
 <script src="./dynamicList.js">  </script>
-
-<script> 
-
-
-
- function renderImage (inputEl, imgContainer ) {
-   file = inputEl.files[0];
-   const fr = new FileReader();
-
-    fr.addEventListener("load", function () {
-    // convert image file to base64 string
-    imgContainer.src = fr.result;
-  }, false);
-
-   fr.readAsDataURL(file);
-
-
-
-   console.log(inputEl.files[0]);
-   //inputEl.value = "";
-
- }
-  
-  fileInput = document.getElementById("image_input");
-  imgContainer = document.getElementById('post_obrazek');
-
-  file = fileInput.files[0];
-  console.log(fileInput)
-   
-  fileInput.addEventListener('change', function () {
-    renderImage(this,imgContainer)
-  })
-</script>
   </body>
 </html>
