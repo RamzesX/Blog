@@ -24,8 +24,15 @@
   position: relative;
 }
 
+.popup input {
+  margin-top: 10px;
+}
+
+
 #guzik {
-  margin-top: 20px;
+  margin-top: 10px;
+  width: 80px;
+  height: 25px;
 }
 
 .popup h2 {
