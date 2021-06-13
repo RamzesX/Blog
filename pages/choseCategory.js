@@ -38,7 +38,6 @@ lista.addEventListener("click", (event) => {
 
 listaTagow.addEventListener("click", (event) => {
 root = event.target.parentNode;
-console.log("cos nie dobrze")
 Tagi = document.querySelectorAll(".picked_category span");
 if (Tagi.length > 1 && event.target.tagName == "IMG") {
   root.remove();

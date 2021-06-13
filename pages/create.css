@@ -260,6 +260,8 @@ label {
   cursor: progress;
 }
 
+
+
 @media screen and (max-width: 1110px) {
   #naglowek_Posta {
     grid-column: 1/1;
