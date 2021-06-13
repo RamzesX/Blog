@@ -96,15 +96,13 @@
     margin-top: 60px;
   }
 
-  aside {
-    visibility: hidden;
-  }
+ 
 
   #conatiner {
     margin-top: 30px;
     display: grid;
     grid-template-columns: 1fr;
-    overflow: hidden;
+    
   }
 
   #post_obrazek {

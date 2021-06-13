@@ -9,3 +9,145 @@
   justify-self: start;
   padding-left: 0%;
 }
+
+#lupka2 {
+  background-image: url("./Search.svg");
+  background-size: cover;
+  width: 25px;
+  height: 25px;
+  border-width: 0;
+  background-color: white;
+  cursor: pointer;
+  padding-top: 15px;
+}
+
+#lupka2:hover {
+  transform: translateY(-3px);
+}
+
+#lupka2:active {
+  transform: translateY(0px);
+}
+
+#aside_szukajka{
+  display: flex;
+  justify-content: end;
+}
+
+#Podpis{
+  margin-bottom: 20px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+#site-search{
+  width: 80%;
+}
+
+#input_lupa{
+  text-align: center;
+
+}
+#Szukajka2{
+  position: sticky;
+  top: 200px;
+  left: 10px;
+
+}
+
+#kategorie_postow{
+  margin-top: 40px;
+ 
+}
+
+#nazwa_listy{
+  text-align: center;
+  margin-bottom: 30px;
+}
+#zbior {
+  margin-right: 50px;
+}
+
+#zbior ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+#zbior li {
+  margin-bottom: 7px;
+
+}
+
+#zbior li:hover {
+  cursor: pointer;
+
+}
+@media screen and (max-width: 1100px) {
+
+  #zbior {
+    visibility: hidden !important;
+  }
+
+ 
+
+#aside_szukajka{
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  position: sticky;
+  top: 90px;
+  z-index: 2;
+  background-color: white;
+  border-bottom: 2px solid #cdd5d7;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+
+  
+}
+
+#lista2{
+  z-index: 0;
+  overflow: hidden;
+}
+
+#Szukajka {
+  place-self: center center;
+}
+
+#Podpis {
+  margin-top: 30px;
+}
+
+
+#Szukajka2 {
+  margin-bottom: 10px;
+}
+
+
+
+}
+
+
+@media screen and (max-width: 780px) {
+
+
+
+  #aside_szukajka{
+    padding-top: 10px;
+
+  }
+
+
+}
+
+
+@media screen and (max-width: 480px) {
+
+ 
+  #aside_szukajka{
+    top:150px;
+    padding-top: 10px;
+  }
+
+
+}

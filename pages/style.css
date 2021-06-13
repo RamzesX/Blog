@@ -17,7 +17,7 @@ header {
   overflow: hidden;
   background-color: white;
   border-bottom: 2px solid #cdd5d7;
-  z-index: 1;
+  z-index: 4;
 }
 
 #kontener-sub {
@@ -533,6 +533,13 @@ a:visited {
   .wrapper5 {
     padding-left: 8%;
   }
+
+  #numerki {
+    position: relative;
+    top: -10px;
+  }
+
+
 }
 
 @media screen and (max-width: 480px) {
@@ -554,5 +561,10 @@ a:visited {
   #sub {
     position: relative;
     left: -40%;
+  }
+
+  #numerki {
+    position: relative;
+    top: -10px;
   }
 }
