@@ -38,6 +38,8 @@
   margin-bottom: 20px;
   margin-top: 40px;
   text-align: center;
+  font-weight: bold;
+  margin-left: 10px;
 }
 
 #site-search{
@@ -63,6 +65,7 @@
 #nazwa_listy{
   text-align: center;
   margin-bottom: 30px;
+  font-weight: bold;
 }
 #zbior {
   margin-right: 50px;
@@ -75,7 +78,6 @@
 
 #zbior li {
   margin-bottom: 7px;
-
 }
 
 #zbior li:hover {

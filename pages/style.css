@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+
 }
 
 header {
@@ -398,6 +399,10 @@ article {
   #img2 {
     margin-right: 10px;
   }
+  footer{
+    height: 250px;
+    padding-top: 50px;
+  }
 }
 
 a {
@@ -407,6 +412,8 @@ a {
 a:visited {
   color: black;
 }
+
+
 
 @media screen and (max-width: 790px) {
   .lista4 > li:first-child {
