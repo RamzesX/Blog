@@ -1,10 +1,128 @@
-#podpis_part2 {
-    text-align: center;
-    font-weight: 500;
+
+
+#menu_menu{
+
+    height: 100%;
+    min-height: 550px;
 }
 
-#podpis_part1 {
+#menu_menu ul {
+    list-style: none;
+    padding-top: 40px;
+    padding-left: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 200px;
+    height: 550px;
+    border-right: 1px black solid;
+    padding-right: 50px;
+
+}
+
+#menu_menu li  {
+    list-style: none;
+    font-weight: bold;
+}
+
+
+
+
+#admin {
+display: grid;
+grid-template-columns: 20% 10% 1fr 10%;
+}
+
+#flex_filtry{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    
+}
+
+#flex_filtry>div{
+    min-width: 10%;
+    border-bottom: 1px solid black;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+#filtry{
+    display: flex;
+    width: 100%;
+    margin-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+#lupka2{
+    width: 33%;
     text-align: center;
-    font-weight: 650;
-    font-style: oblique;
+    vertical-align: middle;
+    border: 0px solid black !important;
+}
+
+
+#lupka2>img{
+    background-image: url("../Search.svg");
+    background-size: cover;
+  width: 25px;
+  height: 25px;
+  border-width: 0;
+  background-color: white;
+  cursor: pointer;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    border-bottom: 1px solid black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+   
+  
+}
+
+#pierwszy{
+    border-top: 1px solid black;
+    height: 30px;
+    font-weight: bold;
+}
+
+
+
+.row>div {
+    width: 25%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content:center;
+   
+}
+
+#table{
+    width: 100%;
+    margin-top: 50px;
+}
+
+#wyniki{
+    grid-column: 3/3;
+    margin-top: 50px;
+}
+
+
+@media screen and (max-width: 1225px) {
+    #popup2{
+        visibility: visible;
+    }
+    
+    body{
+        visibility: hidden;
+    }
+
 }
